@@ -1,7 +1,5 @@
 package com.ccsn.api;
 
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,11 +13,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-@MapperScan(value = {"com.ccsn.api.dao"}, sqlSessionFactoryRef = "org.mybatis.spring.SqlSessionFactoryBean")
+//EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+//@MapperScan(value = {"com.ccsn.api.repository"}, sqlSessionFactoryRef = "org.mybatis.spring.SqlSessionFactoryBean")
 public class CcsnApiApplication {
 
-	@Bean
+	/*@Bean
 	@Primary
 	@ConfigurationProperties(prefix = "spring.datasource")
 	public DataSource dataSource() {
@@ -38,7 +36,7 @@ public class CcsnApiApplication {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource());
 		return sqlSessionFactoryBean;
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(CcsnApiApplication.class, args);
