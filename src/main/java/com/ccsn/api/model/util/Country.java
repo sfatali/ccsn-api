@@ -6,8 +6,8 @@ import java.util.List;
 /**
  * Created by Sabina on 3/12/2018.
  */
-@Entity
-@Table(name = "countries")
+//@Entity
+//@Table(name = "countries")
 public class Country {
 
     public Country() {

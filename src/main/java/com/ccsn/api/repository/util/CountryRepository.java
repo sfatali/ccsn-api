@@ -10,6 +10,6 @@ import java.util.List;
  * Created by Sabina on 3/12/2018.
  */
 public interface CountryRepository extends CrudRepository<Country, Integer> {
-    @Query(value = "", nativeQuery = true)
+    //@Query(value = "", nativeQuery = true)
     List<String> findCountryNames(String lang);
 }
